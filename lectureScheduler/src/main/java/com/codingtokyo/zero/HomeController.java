@@ -27,12 +27,27 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "home/home";
 	}
 	
 	@RequestMapping("/test")
 	public String test(){
 		return "test";
+	}
+	
+	@RequestMapping("/teacher")
+	public String teacher(){
+		return "teacher/teacher";
+	}
+	
+	@RequestMapping("/schedule/createSchedule")
+	public String createSchedule(){
+		return "schedule/createSchedule";
+	}
+	
+	@RequestMapping("/schedule/viewSchedule")
+	public String viewSchedule(){
+		return "schedule/viewSchedule";
 	}
 	
 }
