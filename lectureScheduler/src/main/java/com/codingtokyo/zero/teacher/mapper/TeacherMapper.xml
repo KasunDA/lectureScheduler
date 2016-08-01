@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.codingtokyo.zero.teacher.mapper.TeacherMapper">
+	<resultMap id="teacherMap" type="com.codingtokyo.zero.teacher.domain.Teacher">
+		<id 	property="id"				column="id" />
+		<result property="teacherName"		column="teacherName"/>
+		<result property="eMail" 			column="eMail"/>
+		<result property="lecture_id" 		column="lecture_id"/>
+	</resultMap>
+	
+	<select id="selectList" resultType="hashmap">
+		SELECT 
+			t.id, t.teacherName, t.eMail, l.lectureName 
+		FROM
+			teacher AS t
+		INNER JOIN
+			lecture AS l
+		ON
+			t.lecture_id = l.id;
+	</select>
+	
+	<select id="selectOne" resultMap="teacherMap">
+		SELECT * FROM teacher WHERE id = #{id};
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO
+			teacher (
+				teacherName, eMail, lecture_id
+			) VALUES (
+				#{teacherName},
+				#{eMail},
+				#{lecture_id}
+			);
+	</insert>
+	
+	<update id="modify">
+		UPDATE teacher
+			SET
+				teacherName = #{teacherName},
+				eMail = #{eMail},
+				lecture_id = #{lecture_id}
+			WHERE
+				id = #{id};
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM teacher
+			WHERE
+				id = #{id};
+	</delete>
+	
+</mapper>

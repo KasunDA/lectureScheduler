@@ -12,7 +12,7 @@
 	
 	<hr/>
 	
-	<div class="container" style="width:auto; height:400px">
+	<div class="container" style="width:auto; height:600px">
 		<t:insertAttribute name="content"/>
 	</div>
 	

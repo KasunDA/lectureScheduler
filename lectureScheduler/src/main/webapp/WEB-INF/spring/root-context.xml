@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 	
-	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- 생성된 Bean에 대해서 @Autowired 와 @Qualifier 해석 [@Autowired, @Required, @Resource, @PostConstruct, @PreDestroy, @Configuration]-->
+	<context:annotation-config/>
 	
 	<!-- Tiles -->
 	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
 		<property name="definitions" value="/WEB-INF/spring/config/tiles/tiles-context.xml"/>
 	</bean>
-		
+	
+	<!-- Database -->
+	<import resource="classpath:config/spring/*-context.xml"/>	
 </beans>

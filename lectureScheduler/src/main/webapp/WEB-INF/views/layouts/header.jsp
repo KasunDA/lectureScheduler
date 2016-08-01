@@ -6,7 +6,11 @@
 <!-- CSS -->
 <link href="/resources/lib/bootstrap-3.3.2/css/bootstrap.min.css" rel="stylesheet">
 <link href="/resources/css/test.css" rel="stylesheet">
+<link href="/resources/lib/jquery/datatables/css/dataTables.bootstrap.css" rel="stylesheet">
+<link href="/resources/lib/jquery/datatables/css/jquery.dataTables.css" rel="stylesheet">
 <title>Lecture Scheduler</title>
-<!-- Bootstrap core JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- jQuery -->
+<script src="/resources/lib/jquery/jquery-3.1.0.min.js"></script>
 <script src="/resources/lib/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+<script src="/resources/lib/jquery/datatables/js/jquery.dataTables.js"></script>
+<script src="/resources/lib/jquery/datatables/js/dataTables.bootstrap.js"></script>

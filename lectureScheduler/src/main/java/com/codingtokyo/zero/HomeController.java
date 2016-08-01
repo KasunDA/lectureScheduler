@@ -30,16 +30,6 @@ public class HomeController {
 		return "home/home";
 	}
 	
-	@RequestMapping("/test")
-	public String test(){
-		return "test";
-	}
-	
-	@RequestMapping("/teacher")
-	public String teacher(){
-		return "teacher/teacher";
-	}
-	
 	@RequestMapping("/schedule/createSchedule")
 	public String createSchedule(){
 		return "schedule/createSchedule";

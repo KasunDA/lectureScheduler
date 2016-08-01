@@ -2,10 +2,15 @@
 
 <h1> createSchedule.jsp</h1>
 
+<script src="jquery.modal.js" type="text/javascript" charset="utf-8"></script>
 
 <button type="button" class="btn btn-primary">등록하기</button>
 
 <button class="btn btn-default" data-target="#layerpop" data-toggle="modal">모달출력버튼</button><br/>
+
+<p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+
+
 <div class="modal fade" id="layerpop" >
   <div class="modal-dialog">
     <div class="modal-content">
