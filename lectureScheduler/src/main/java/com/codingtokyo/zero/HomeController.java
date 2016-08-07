@@ -35,9 +35,4 @@ public class HomeController {
 		return "schedule/createSchedule";
 	}
 	
-	@RequestMapping("/schedule/viewSchedule")
-	public String viewSchedule(){
-		return "schedule/viewSchedule";
-	}
-	
 }

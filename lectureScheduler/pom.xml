@@ -190,6 +190,26 @@
 			<version>4.1.6.RELEASE</version>
 		</dependency>
 
+		<!-- json -->
+		<!-- Map형식으로 할 때 -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<!-- Response 형식으로 할 때
+		<dependency> <groupId>com.fasterxml.jackson.core</groupId> <artifactId>jackson-databind</artifactId> 
+			<version>2.3.3</version> 
+		</dependency> 
+		-->
+		<!-- ModelAndView 형식 -->
+		<!-- <dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib-ext-spring</artifactId>
+			<version>1.0.2</version>
+		</dependency> -->
+
+
 	</dependencies>
 	<build>
 		<plugins>

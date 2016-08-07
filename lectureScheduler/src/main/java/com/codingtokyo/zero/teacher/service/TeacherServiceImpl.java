@@ -44,5 +44,27 @@ public class TeacherServiceImpl implements TeacherService {
 		mapper.delete(id);
 	}
 
+	@Override
+	public int checkMail(String eMail) {
+		return mapper.checkMail(eMail);
+	}
+
+	@Override
+	public String isUseMail(String teacherID, String eMail) {
+		
+		// 입력한 메일이 사용할 수 있는지 없는지에 대한 내용을 담은 변수
+		String isUseMail = "true";
+
+		String[] usedMailList = mapper.isUseMail(teacherID);
+
+		for(int i = 0; i < usedMailList.length; i++){
+			System.out.println(usedMailList[i]);
+			if(eMail.equals(usedMailList[i])){
+				isUseMail = "false";
+			}
+		}
+		return isUseMail;
+	}
+
 
 }

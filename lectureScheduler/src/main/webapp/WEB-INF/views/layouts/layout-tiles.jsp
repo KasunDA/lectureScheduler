@@ -7,16 +7,12 @@
 	<t:insertAttribute name="header"/>
 </head>
 <body>
-<div class="container">
+<div class="container content">
 	<t:insertAttribute name="menu"/>
 	
-	<hr/>
-	
-	<div class="container" style="width:auto; height:600px">
+	<div class="container">
 		<t:insertAttribute name="content"/>
 	</div>
-	
-	<hr/>
 	
 	<t:insertAttribute name="footer"/>
 </div>

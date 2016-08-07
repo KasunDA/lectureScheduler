@@ -2,10 +2,10 @@ package com.codingtokyo.zero.teacher.domain;
 
 public class Teacher {
 	
-	private int id;
-	private String teacherName;
-	private String eMail;
-	private int lecture_id;
+	private int id;					// 강사 ID
+	private String teacherName;		// 이름
+	private String eMail;			// 이메일
+	private int lecture_id;			// 과목 번호
 
 	public Teacher() {
 	}

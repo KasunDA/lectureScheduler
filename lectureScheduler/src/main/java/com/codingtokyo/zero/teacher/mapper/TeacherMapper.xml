@@ -51,4 +51,12 @@
 				id = #{id};
 	</delete>
 	
+	<select id="checkMail" resultType="int">
+		SELECT COUNT(*) FROM teacher WHERE eMail = #{eMail};
+	</select>
+	
+	<select id="isUseMail" resultType="String">
+		SELECT eMail FROM teacher WHERE id != #{id};
+	</select>
+	
 </mapper>

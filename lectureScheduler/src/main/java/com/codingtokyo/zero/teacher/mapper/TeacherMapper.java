@@ -26,5 +26,10 @@ public interface TeacherMapper {
 	// 강사 정보 삭제
 	void delete(String id);
 
+	// 메일 중복 검사
+	int checkMail(String eMail);
+
+	// 강사 편집시 메일 중복 검사
+	String[] isUseMail(String teacherID);
 
 }
